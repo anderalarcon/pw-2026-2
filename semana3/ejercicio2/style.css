@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --red: #e3350d;
+    --red-dark: #b1270b;
+    --ink: #1c1c1c;
+    --muted: #6b7280;
+    --paper: #f4f6f8;
+    --card: #ffffff;
+    --grass: #78c850;
+    --fire: #f08030;
+    --water: #6890f0;
+    --poison: #a040a0;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-family: system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+  }
+  
+  .pokedex-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 24px 22px;
+    background: linear-gradient(180deg, var(--red), var(--red-dark));
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(178, 39, 11, 0.25);
+  }
+  
+  .pokedex-title {
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+  }
+  
+  .pokedex-subtitle {
+    margin-top: 4px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+  
+  .pokeball {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background:
+      linear-gradient(#fff, #fff) center / 100% 4px no-repeat,
+      linear-gradient(180deg, #ff5a3c 50%, #fff 50%);
+    box-shadow: inset 0 0 0 2px #1c1c1c;
+    position: relative;
+  }
+  
+  .pokeball::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #1c1c1c;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+  }
+  
+  .pokedex-main {
+    padding: 28px 20px 48px;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    min-height: 280px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-image-container {
+    display: grid;
+    place-items: center;
+    height: 160px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: #eef1f4;
+  }
+  
+  .card-image {
+    max-width: 140px;
+    max-height: 140px;
+  }
+  
+  .card-number {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  
+  .card-name {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-type {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  
+  .type-grass {
+    background: var(--grass);
+  }
+  
+  .type-fire {
+    background: var(--fire);
+  }
+  
+  .type-water {
+    background: var(--water);
+  }
+  
+  .type-poison {
+    background: var(--poison);
+  }
+  
+  @media (min-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .cards-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }

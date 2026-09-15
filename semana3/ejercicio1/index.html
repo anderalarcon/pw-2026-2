@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio 3 — Character Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="game-panel">
+        <p class="game-kicker">RPG Lab</p>
+        <h1 class="game-title">Character Generator</h1>
+
+        <div class="avatar-frame">
+            <div class="avatar">
+              <img id="character-avatar" class="avatar-image" src="" alt="Avatar" />
+            </div>
+          </div>
+
+        <p id="character-name" class="character-name">????????</p>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="stat-label">Level</span>
+            <span id="character-level" class="stat-value">??</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Strength</span>
+            <span id="character-strength" class="stat-value">??</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Agility</span>
+            <span id="character-agility" class="stat-value">??</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Intelligence</span>
+            <span id="character-intelligence" class="stat-value">??</span>
+          </div>
+          <div class="stat stat-wide">
+            <span class="stat-label">Health</span>
+            <span id="character-health" class="stat-value">??</span>
+          </div>
+        </div>
+
+        <button id="generate-button" type="button" class="btn-generar">
+          Generar personaje
+        </button>
+
+        <p id="character-rank" class="character-message">????????</p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
